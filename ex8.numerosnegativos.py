@@ -6,17 +6,18 @@ meu_vetor = []
 
 print("NUMEROS NEGATIVOS")
 print("Informe 4 números positivos ou negativos ")
-meu_vetor.append(float(input("Digite o primeiro número: ")))
-meu_vetor.append(float(input("Digite o segundo número: ")))
-meu_vetor.append(float(input("Digite o terceiro número: ")))
-meu_vetor.append(float(input("Digite o quarto número: ")))
 
-for numero in meu_vetor:
+# Entrada de dados
+for numero in range (4): # ira repetir esse input 4 vezes
+    meu_vetor.append(float(input("Digite um número\n")))
+# Inicializa o contador de números negativos
+quantidade_negativos = 0
+
+# Verifica se cada número é negativo ou positivo
+for numero in meu_vetor: #percorre os numeros verificando cada 1
     if numero < 0:
-        print(f"O número {numero}, é negativo")
-    
-    elif numero == 0:
-        print("O número é zero")
+        #Aqui ele soma +1 a variavel quantidade_negativos a cada numero negativo que ele encontrar
+        quantidade_negativos += 1
 
-    else:
-        print(f"O número {numero}, é positivo.")
+# Exibe a quantidade de números negativos
+print(f"\nQuantidade de números negativos digitados: {quantidade_negativos}")
